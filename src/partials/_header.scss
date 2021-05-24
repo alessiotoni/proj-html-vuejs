@@ -40,11 +40,19 @@
     align-items: baseline;
     li {
         display: inline-block;
-        margin: 0 0 0 ($spacing / 2);
-    }
-    .button_primary {
-        padding-right: $spacing;
-        padding-left: $spacing;
+        margin: 0 0 0 ($spacing);
+        .container_button {
+            position: relative;
+            width: 130px;
+            height: 20px;
+            .button_primary {
+                padding-right: $spacing;
+                padding-left: $spacing;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
     }
     
 }

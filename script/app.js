@@ -50,10 +50,36 @@ const myApp = new Vue({
             "Telephone",
             "Locacion",
         ],
-        requestCallbackReceived: [],
+        learnMoreList: [
+            {
+                imgUrl: "../public/images/driving_preview-400x300.jpg",
+                title: "courses",
+                status: "new"
+            },
+            {
+                imgUrl: "/public/images/courses-passplus-200x200.jpg",
+                title: "pass pluss",
+                status: ""
+            },
+            {
+                imgUrl: "/public/images/course-intensive-200x200.jpg",
+                title: "intensive course",
+                status: ""
+            },
+            {
+                imgUrl: "/public/images/courses-instructor-200x200.jpg",
+                title: "instructor",
+                status: ""
+            },
+        ],
+        showCard: 0,
     },
 
-    methods: {
 
+    methods: {
+        showLearnMore(index) {
+            this.showCard = index
+            console.log(index)
+        }
     },
 })

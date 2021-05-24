@@ -36,18 +36,28 @@ a {
   margin-top: -80px;
 }
 
-.button_primary {
+[class^=button_] {
   border-radius: 20px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+[class^=button_]:hover {
+  letter-spacing: 1.5px;
+}
+
+.button_primary {
   border: none;
   color: #ffffff;
   background-color: #85b680;
-  padding: 10px;
-  text-transform: uppercase;
-  font-size: 600;
-  cursor: pointer;
 }
-.button_primary:hover {
-  color: #3f4843;
+
+.button_secondary {
+  border: 2px solid #7f9ea8;
+  color: #7f9ea8;
+  background-color: transparent;
 }
 
 .col-6 {
@@ -56,10 +66,6 @@ a {
 
 .col-4 {
   width: 33.3333333333%;
-}
-
-.col-3 {
-  width: calc(100% / 12 * 3);
 }
 
 .top_header {
@@ -73,7 +79,7 @@ a {
 .top_header .container {
   justify-content: space-between;
   color: #7f9ea8;
-  font-size: 11.2px;
+  font-size: 12.8px;
 }
 
 .hero {
@@ -110,18 +116,26 @@ a {
 }
 .hero nav ul li {
   display: inline-block;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 20px;
 }
-.hero nav ul .button_primary {
+.hero nav ul li .container_button {
+  position: relative;
+  width: 130px;
+  height: 20px;
+}
+.hero nav ul li .container_button .button_primary {
   padding-right: 20px;
   padding-left: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .hero nav ul li a {
   padding: 10px 0;
   color: #ffffff;
   text-transform: uppercase;
-  font-size: 11.2px;
+  font-size: 12.8px;
   font-weight: 600;
   border-bottom: 2px solid transparent;
   transition: all 0.4s;
@@ -138,7 +152,7 @@ span.new {
   border-radius: 4px;
   background-color: #85b680;
   text-transform: uppercase;
-  font-size: 8.4px;
+  font-size: 9.6px;
   font-weight: 600;
   margin-left: 3.3333333333px;
 }
@@ -166,7 +180,7 @@ section .container .content {
 section .container .content h2 {
   text-transform: capitalize;
   margin-bottom: 40px;
-  font-size: 23.8px;
+  font-size: 27.2px;
   color: #3f4843;
 }
 section .container .content p {
@@ -182,7 +196,7 @@ section .container .card h3 {
   text-transform: capitalize;
   margin-bottom: 40px;
   color: #85b680;
-  font-size: 23.8px;
+  font-size: 27.2px;
 }
 section .container .card p {
   margin-bottom: 30px;
@@ -202,13 +216,16 @@ section .container .card form input[type=submit] {
 }
 
 section.cta {
-  height: 200px;
+  height: 170px;
   color: #ffffff;
   position: relative;
   overflow: hidden;
 }
 section.cta img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-height: 100%;
 }
 section.cta .container {
@@ -228,11 +245,34 @@ section.cta .container i {
   margin-right: 20px;
 }
 
-.promise {
+.learn_more {
   position: relative;
   height: 500px;
 }
-.promise .background {
+.learn_more .col-3 {
+  padding: 20px;
+  text-align: center;
+  flex-basis: calc(100% / 4);
+}
+.learn_more .col-3 .box_img {
+  width: 100%;
+  height: 160px;
+  border: 1px solid beige;
+}
+.learn_more .col-3 .box_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.learn_more .col-3 h4 {
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  color: #7f9ea8;
+}
+.learn_more .background {
   background-image: url("/public/images/promise-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -244,7 +284,20 @@ section.cta .container i {
   left: 0;
   z-index: -1;
 }
-.promise .card.col-4 h4 {
+.learn_more .row .col-3 {
+  color: #7f9ea8;
+}
+.learn_more .card {
+  position: relative;
+  overflow: hidden;
+}
+.learn_more .card.col-4 h4 {
   text-transform: capitalize;
   margin-bottom: 20px;
+}
+.learn_more .card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80px;
 }

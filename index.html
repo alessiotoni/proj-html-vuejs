@@ -44,7 +44,9 @@
                             <li v-for="link in navbarLinks">
                                 <a v-if="link.type == 'link'" :href="link.link">{{link.name}} <span v-if="link.status == 'new'" class="new">{{link.status}}</span></a>
                                 
-                                <button v-else class="button_primary">{{link.name}}</button>
+                                <div v-else class="container_button">
+                                    <input type="button" class="button_primary" :value="link.name">
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -93,17 +95,26 @@
                 </div>
             </section>
 
-            <section class="promise">
-                <div class="background"></div>
-                <div class="container flex">
-                    <div class="card col-4 up">
-                        <h4>courses</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, adipisci quo illum eaque laborum at, maxime vero veritatis facilis voluptatibus explicabo obcaecati aspernatur! Deleniti quo commodi rem minima placeat quisquam.</p>
-                        <input type="button" class="button_primary" value="COURSE INFORMATION">
+            <section class="learn_more">
+                <div class="background">
+                </div>
+                <div class="container">
+                    <div class="row flex">
+                        <div class="col-3" v-for="(item, index) in learnMoreList" v-if="index != showCard">
+                            <div class="box_img">
+                                <img :src="item.imgUrl" alt="">
+                            </div>
+                            <h4>{{item.title}}</h4>
+                            <input type="button" class="button_secondary" value="LEARN MORe" @click="showLearnMore(index)">
+                        </div>
+                        <div v-else class="card col-4 up">
+                            <h4>{{item.title}}</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, adipisci quo illum eaque laborum at, maxime vero veritatis facilis voluptatibus explicabo obcaecati aspernatur! Deleniti quo commodi rem minima placeat quisquam.</p>
+                            <input type="button" class="button_primary" value="COURSE INFORMATION">
+                            <img v-if="item.status == 'new'" src="/public/images/new-corner.jpg" alt="">
+                        </div>
                     </div>
-                    <div class="col-3"></div>
-                    <div class="col-3"></div>
-                    <div class="col-3"></div>
+                    
                 </div>
             </section>
 

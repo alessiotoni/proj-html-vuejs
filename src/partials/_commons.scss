@@ -31,18 +31,28 @@ a {
     }
 
 }
-.button_primary {
+[class^="button_"] {
     border-radius: 20px;
+    padding: ($spacing / 2);
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s;
+    &:hover {
+        letter-spacing: 1.5px;
+    }
+
+}
+.button_primary {
     border: none;
     color: $color_cube_primary;
     background-color: $median_cut_terziary;
-    padding: ($spacing / 2);
-    text-transform: uppercase;
-    font-size: 600;
-    cursor: pointer;
-    &:hover {
-        color: $median_cut_secondary;   
-    }
+    
+}
+.button_secondary {
+    border: 2px solid $median_cut_quaternary;
+    color: $median_cut_quaternary;
+    background-color: transparent;
 }
 .col-6 {
     width: 50%;
@@ -50,6 +60,6 @@ a {
 .col-4 {
     width: (100% / 12 * 4);
 }
-.col-3 {
-    width: calc(100% / 12 * 3);
-}
+// .col-3 {
+//     width: calc(100% / 12 * 3);
+// }
