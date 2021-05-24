@@ -19,3 +19,22 @@ ul {
 a {
     text-decoration: none;
 }
+.card {
+    position: relative;
+    border-radius: 4px;
+    padding: $spacing;
+    text-align: center;
+}
+.button_primary {
+    border-radius: 20px;
+    border: none;
+    color: $color_cube_primary;
+    background-color: $median_cut_terziary;
+    padding: ($spacing / 2);
+    text-transform: uppercase;
+    font-size: 600;
+    cursor: pointer;
+    &:hover {
+        color: $median_cut_secondary;   
+}
+}

@@ -43,7 +43,14 @@ const myApp = new Vue({
                 type: "button",
                 link: ""
             },
-        ]
+        ],
+        formList: [
+            "Your Name*",
+            "Email*",
+            "Telephone",
+            "Locacion",
+        ],
+        requestCallbackReceived: [],
     },
 
     methods: {

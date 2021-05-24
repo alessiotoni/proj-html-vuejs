@@ -1,6 +1,9 @@
 .top_header {
     padding: ($spacing / 2);
     background-color: $color_cube_secondary;
+    i {
+        margin-right: $spacing;
+    }
 }
 .top_header .container {
     justify-content: space-between;
@@ -39,24 +42,12 @@
         display: inline-block;
         margin: 0 ($spacing / 2);
     }
+    .button_primary {
+        padding-right: $spacing;
+        padding-left: $spacing;
+    }
     
 }
-.btn_primary {
-    border-radius: 20px;
-    border: none;
-    color: $color_cube_primary;
-    background-color: $median_cut_terziary;
-    padding: ($spacing / 2) ($spacing * 0.8);
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: $font_size*0.8;
-    transition: all 0.4s;
-    cursor: pointer;
-    &:hover {
-        color: $median_cut_primary;
-    }
-}
-
 .hero nav ul li a {
     padding: ($spacing / 2) 0;
     color: $color_cube_primary;

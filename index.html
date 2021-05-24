@@ -44,7 +44,7 @@
                             <li v-for="link in navbarLinks">
                                 <a v-if="link.type == 'link'" :href="link.link">{{link.name}} <span v-if="link.status == 'new'" class="new">{{link.status}}</span></a>
                                 
-                                <button v-else class="btn_primary">{{link.name}}</button>
+                                <button v-else class="button_primary">{{link.name}}</button>
                             </li>
                         </ul>
                     </div>
@@ -57,6 +57,43 @@
                 </div>
             </div>
         </header>
+
+        <main>
+
+            <section>
+                <div class="container flex">
+                    <div class="content">
+                        <h2>get behind the wheel</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit tenetur consectetur dolorum amet dolore iure! Aliquam aut, labore asperiores quidem ducimus corrupti dolore, fugit mollitia porro necessitatibus esse placeat eum.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quis dignissimos deserunt neque quae, quaerat distinctio cupiditate facere ipsum nulla sunt illo laudantium voluptates eligendi veritatis animi maiores dolore. Dolorem.</p>
+                    </div>
+                    <div class="card">
+                        <h3>first lesson free!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sit amet consectetur adipisicing elit.</p>
+                        <form action="">
+                            <input type="text" v-for="input in formList" :placeholder="input">
+                            <input type="submit" class="button_primary" value="REQUEST A CALLBACK">
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta">
+                <img src="/public/images/horizontal-cta-background.jpg" alt="">
+                <div class="container flex">
+                    <div class="text">
+                        <h2>start learning to drive today</h2>
+                        <p>Give us a call to schedule your first driving lesson</p>
+                    </div>
+                    <p>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        1-800-555-555
+
+                    </p>
+                </div>
+            </section>
+
+        </main>
     </div>
     <script src="/script/app.js"></script>
 </body>
