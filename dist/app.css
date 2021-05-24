@@ -27,9 +27,13 @@ a {
 
 .card {
   position: relative;
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 20px;
   text-align: center;
+  background-color: #ffffff;
+}
+.card.up {
+  margin-top: -80px;
 }
 
 .button_primary {
@@ -44,6 +48,18 @@ a {
 }
 .button_primary:hover {
   color: #3f4843;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-3 {
+  width: calc(100% / 12 * 3);
 }
 
 .top_header {
@@ -94,7 +110,7 @@ a {
 }
 .hero nav ul li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 0 0 10px;
 }
 .hero nav ul .button_primary {
   padding-right: 20px;
@@ -141,11 +157,10 @@ span.new {
   margin-bottom: 10px;
 }
 
-section {
+section .container {
   padding: 40px 0;
 }
 section .container .content {
-  width: 50%;
   padding: 20px;
 }
 section .container .content h2 {
@@ -160,11 +175,8 @@ section .container .content p {
 }
 section .container .card {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
-  width: 50%;
   padding-top: 40px;
   padding-bottom: 40px;
-  margin-top: -100px;
-  z-index: 10000;
 }
 section .container .card h3 {
   text-transform: capitalize;
@@ -193,12 +205,11 @@ section.cta {
   height: 200px;
   color: #ffffff;
   position: relative;
+  overflow: hidden;
 }
 section.cta img {
   width: 100%;
   max-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 section.cta .container {
   position: absolute;
@@ -211,7 +222,29 @@ section.cta .container {
 }
 section.cta .container h2 {
   text-transform: capitalize;
+  margin-bottom: 10px;
 }
 section.cta .container i {
   margin-right: 20px;
+}
+
+.promise {
+  position: relative;
+  height: 500px;
+}
+.promise .background {
+  background-image: url("/public/images/promise-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.promise .card.col-4 h4 {
+  text-transform: capitalize;
+  margin-bottom: 20px;
 }

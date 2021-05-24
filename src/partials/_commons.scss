@@ -9,6 +9,7 @@ html {
 .container {
     max-width: 920px;
     margin: auto;
+    // padding: $spacing;
 }
 .flex {
     display: flex;
@@ -21,9 +22,14 @@ a {
 }
 .card {
     position: relative;
-    border-radius: 4px;
+    border-radius: 8px;
     padding: $spacing;
     text-align: center;
+    background-color: $color_cube_primary;
+    &.up {
+        margin-top: -80px;
+    }
+
 }
 .button_primary {
     border-radius: 20px;
@@ -36,5 +42,14 @@ a {
     cursor: pointer;
     &:hover {
         color: $median_cut_secondary;   
+    }
 }
+.col-6 {
+    width: 50%;
+}
+.col-4 {
+    width: (100% / 12 * 4);
+}
+.col-3 {
+    width: calc(100% / 12 * 3);
 }
