@@ -1,0 +1,97 @@
+.top_header {
+    padding: ($spacing / 2);
+    background-color: $color_cube_secondary;
+}
+.top_header .container {
+    justify-content: space-between;
+    color: $median_cut_quaternary;
+    font-size: $font_size * .8;
+}
+ 
+
+.hero {
+    background-image: url("/public/images/homepage-hero-background.jpg");
+    height: 500px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    .container {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        .text {
+            color: $color_cube_primary;
+            h1 {
+                margin-bottom: $spacing / 2;
+            }
+        }
+    }
+}
+.hero nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: $spacing;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+}
+.hero nav .container {
+    justify-content: space-between;
+    align-items: center;
+}
+.hero nav .brand {
+    flex-shrink: 0;
+    width: 150px;
+}
+.hero nav .brand img {
+    width: 100%;
+}
+.hero nav ul {
+    align-items: baseline;
+    li {
+        display: inline-block;
+        margin: 0 ($spacing / 2);
+    }
+    
+}
+.btn_primary {
+    border-radius: 20px;
+    border: none;
+    color: $color_cube_primary;
+    background-color: $median_cut_terziary;
+    padding: ($spacing / 2) ($spacing * 0.8);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: $font_size*0.8;
+    transition: all 0.4s;
+    cursor: pointer;
+    &:hover {
+        color: $median_cut_primary;
+    }
+}
+
+.hero nav ul li a {
+    padding: ($spacing / 2) 0;
+    color: $color_cube_primary;
+    text-transform: uppercase;
+    font-size: $font_size*0.8;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all 0.4s;
+    &:hover {
+        color: $median_cut_terziary;
+        border-bottom: 2px solid $median_cut_terziary;
+    }
+}
+span.new {
+    display: inline-block;
+    color: $color_cube_primary;
+    padding: $spacing/6;
+    border-radius: 4px;
+    background-color: $median_cut_terziary;
+    text-transform: uppercase;
+    font-size: $font_size*0.6;
+    font-weight: 600;
+    margin-left: $spacing/6;
+
+}

@@ -21,6 +21,42 @@
 <body>
     <div id="app">
 
+        <header>
+
+            <div class="top_header">
+                <div class="container flex">
+                    <p>We have a 95% Successful Pass Rate!</p>
+                    <p>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span>Gives us a call to book your tuition! 1-800-555-555</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="hero">
+                <nav>
+                    <div class="container flex">
+                        <div class="brand">
+                            <img src="/public/images/avada-drivers-logo-1x.png" alt="">
+                        </div>
+                        <ul class="flex">
+                            <li v-for="link in navbarLinks">
+                                <a v-if="link.type == 'link'" :href="link.link">{{link.name}} <span v-if="link.status == 'new'" class="new">{{link.status}}</span></a>
+                                
+                                <button v-else class="btn_primary">{{link.name}}</button>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container flex">
+                    <div class="text">
+                        <h1>Drive with Avada</h1>
+                        <p>We offer the finest driving tuition money can buy</p>
+                    </div>
+                </div>
+            </div>
+        </header>
     </div>
+    <script src="/script/app.js"></script>
 </body>
 </html>
