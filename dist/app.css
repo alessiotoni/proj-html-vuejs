@@ -188,7 +188,7 @@ section .container .content p {
   color: #7f9ea8;
 }
 section .container .card {
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -247,7 +247,6 @@ section.cta .container i {
 
 .learn_more {
   position: relative;
-  height: 500px;
 }
 .learn_more .col-3 {
   padding: 20px;
@@ -284,20 +283,158 @@ section.cta .container i {
   left: 0;
   z-index: -1;
 }
+.learn_more .row {
+  margin-bottom: 100px;
+}
 .learn_more .row .col-3 {
   color: #7f9ea8;
 }
-.learn_more .card {
+.learn_more .row .card {
   position: relative;
   overflow: hidden;
 }
-.learn_more .card.col-4 h4 {
+.learn_more .row .card.col-4 h4 {
   text-transform: capitalize;
   margin-bottom: 20px;
 }
-.learn_more .card img {
+.learn_more .row .card img {
   position: absolute;
   top: 0;
   left: 0;
   height: 80px;
+}
+
+.percentual .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.percentual .card {
+  border-top: 8px solid #85b680;
+}
+.percentual .card h5 {
+  text-transform: uppercase;
+  font-size: 17.6px;
+  color: #7f9ea8;
+}
+
+.progress {
+  width: 200px;
+  height: 200px;
+  font-size: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  color: #7f9ea8;
+  text-align: center;
+  line-height: 200px;
+  margin: 20px;
+}
+.progress .title.timer {
+  font-size: 32px;
+}
+
+.progress::after {
+  content: "%";
+}
+
+.progress .title {
+  position: relative;
+  z-index: 100;
+}
+
+.progress .overlay {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.progress .left, .progress .right {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 10px solid #85b680;
+  border-radius: 100px 0px 0px 100px;
+  border-right: 0;
+  transform-origin: right;
+}
+
+.progress .left {
+  -webkit-animation: load1 1s linear forwards;
+          animation: load1 1s linear forwards;
+}
+
+.progress:nth-of-type(2) .right, .progress:nth-of-type(3) .right {
+  -webkit-animation: load2 0.5s linear forwards 1s;
+          animation: load2 0.5s linear forwards 1s;
+}
+
+.progress:last-of-type .right, .progress:first-of-type .right {
+  -webkit-animation: load3 0.8s linear forwards 1s;
+          animation: load3 0.8s linear forwards 1s;
+}
+
+@-webkit-keyframes load1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes load1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes load2 {
+  0% {
+    z-index: 100;
+    transform: rotate(180deg);
+  }
+  100% {
+    z-index: 100;
+    transform: rotate(270deg);
+  }
+}
+@keyframes load2 {
+  0% {
+    z-index: 100;
+    transform: rotate(180deg);
+  }
+  100% {
+    z-index: 100;
+    transform: rotate(270deg);
+  }
+}
+@-webkit-keyframes load3 {
+  0% {
+    z-index: 100;
+    transform: rotate(180deg);
+  }
+  100% {
+    z-index: 100;
+    transform: rotate(315deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    z-index: 100;
+    transform: rotate(180deg);
+  }
+  100% {
+    z-index: 100;
+    transform: rotate(315deg);
+  }
 }
