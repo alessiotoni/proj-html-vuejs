@@ -292,6 +292,7 @@ section.cta .container i {
   width: 100%;
   height: 160px;
   border: 1px solid beige;
+  margin-bottom: 10px;
 }
 .learn_more .col-3 .box_img img {
   width: 100%;
@@ -352,6 +353,7 @@ section.cta .container i {
   width: 100%;
 }
 .row.instructors .text p {
+  line-height: 30px;
   width: 80%;
 }
 .row.instructors .text .button_primary {
@@ -411,140 +413,77 @@ section.cta .container i {
   cursor: pointer;
 }
 
-.percentual .container {
-  display: flex;
+#progress_bar {
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
+  margin-top: -90px;
+  margin-bottom: 40px;
 }
-
-.percentual .card {
-  border-top: 8px solid #85b680;
-}
-.percentual .card h5 {
-  text-transform: uppercase;
-  font-size: 17.6px;
-  color: #7f9ea8;
-}
-
-.progress {
-  width: 200px;
-  height: 200px;
-  font-size: 30px;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-  color: #7f9ea8;
+#progress_bar .card {
+  border-top: 8px solid #79b27b;
+  flex-basis: 33.3333333333%;
   text-align: center;
-  line-height: 200px;
-  margin: 20px;
+  transition: all 0.4s;
 }
-.progress .title.timer {
-  font-size: 32px;
+#progress_bar .card:hover {
+  flex-basis: 37.037037037%;
 }
-
-.progress::after {
-  content: "%";
+#progress_bar .card:nth-child(2) {
+  margin: 0 10px;
 }
-
-.progress .title {
+#progress_bar .card h2, #progress_bar .card .text {
+  color: #7f9ea8;
+  text-transform: uppercase;
+}
+#progress_bar .card .text {
+  margin-top: 40px;
+}
+#progress_bar .card .percent {
   position: relative;
-  z-index: 100;
 }
-
-.progress .overlay {
-  width: 50%;
-  height: 100%;
+#progress_bar .card .percent .number {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.progress .left, .progress .right {
-  width: 50%;
+svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  z-index: 10;
+  transform: rotate(275deg);
+}
+svg circle {
+  width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 10px solid #85b680;
-  border-radius: 100px 0px 0px 100px;
-  border-right: 0;
-  transform-origin: right;
+  fill: none;
+  stroke: #e5e8eb;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+svg circle:nth-child(2) {
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
 }
 
-.progress .left {
-  -webkit-animation: load1 1s linear forwards;
-          animation: load1 1s linear forwards;
+.card:nth-child(1) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 95) / 100);
+  stroke: #79b27b;
 }
 
-.progress:nth-of-type(2) .right, .progress:nth-of-type(3) .right {
-  -webkit-animation: load2 0.5s linear forwards 1s;
-          animation: load2 0.5s linear forwards 1s;
+.card:nth-child(2) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 100) / 100);
+  stroke: #79b27b;
 }
 
-.progress:last-of-type .right, .progress:first-of-type .right {
-  -webkit-animation: load3 0.8s linear forwards 1s;
-          animation: load3 0.8s linear forwards 1s;
+.card:nth-child(3) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 0.01) / 100);
+  stroke: #79b27b;
 }
 
-@-webkit-keyframes load1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-
-@keyframes load1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-@-webkit-keyframes load2 {
-  0% {
-    z-index: 100;
-    transform: rotate(180deg);
-  }
-  100% {
-    z-index: 100;
-    transform: rotate(270deg);
-  }
-}
-@keyframes load2 {
-  0% {
-    z-index: 100;
-    transform: rotate(180deg);
-  }
-  100% {
-    z-index: 100;
-    transform: rotate(270deg);
-  }
-}
-@-webkit-keyframes load3 {
-  0% {
-    z-index: 100;
-    transform: rotate(180deg);
-  }
-  100% {
-    z-index: 100;
-    transform: rotate(315deg);
-  }
-}
-@keyframes load3 {
-  0% {
-    z-index: 100;
-    transform: rotate(180deg);
-  }
-  100% {
-    z-index: 100;
-    transform: rotate(315deg);
-  }
-}
 section.slider {
   text-align: center;
   background-image: url(/images/testimonial-background.jpg?29c9e2fd51bf953e4295c2c0eefb9873);
