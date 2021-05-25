@@ -86,22 +86,22 @@ const myApp = new Vue({
         testimonials: [
             {
                 img: "./public/images/testimonial-sophia.png",
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit sit sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit sit sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit sit sit amet consectetur adipisicing elit.",
                 name: "sophia jones",
             },
             {
                 img: "./public/images/testimonial-kelly.png",
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit sit amet consectetur adipisicing elit. Lorem ipsum adipisicing elit. elit sit amet consectetur adipisicing elit. Lorem ipsum adipisicing elit.",
+                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil incidunt ipsam, deserunt adipisci fuga blanditiis suscipit eligendi, temporibus nobis eos dolor et consectetur veritatis quis vel.",
                 name: "kelly jones",
             },
             {
                 img: "./public/images/testimonial-kate.png",
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit sit amet consectetur adipisicing elit. Lorem ipsum consectetur adipisicing elit.",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aut quod nemo illo optio error quisquam culpa.",
                 name: "kate jones",
             },
             {
                 img: "./public/images/testimonial-harold.png",
-                description: "Lorem ipsum dolor sit amet consectetur  elit sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur  elit sit amet consectetur adipisicing elit.",
+                description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis architecto numquam consequatur aspernatur, pariatur illo quam repudiandae, quidem alias doloremque suscipit sunt expedita, dolorem impedit eius ullam vero eveniet temporibus.",
                 name: "harold jones",
             },
         ],
