@@ -144,7 +144,6 @@ const myApp = new Vue({
     methods: {
         showLearnMore(index) {
             this.showCard = index
-            console.log(index)
         },
         changeTestimonials(item, index) {
             this.testimonialActive = index
@@ -194,6 +193,22 @@ const myApp = new Vue({
         },
         changePage(el, i){
             this.pageActive = i
+        },
+        nextTestimonial() {
+            if (this.testimonialActive < (this.testimonials.length - 1)) {
+                this.testimonialActive++;
+
+            } else {
+                this.testimonialActive = 0;
+            }
+
+        },
+        previousTestimonial() {
+            this.testimonialActive--;
+            if (this.testimonialActive < 0) {
+                this.testimonialActive = (this.testimonials.length - 1);
+            }
+
         }
     },
 

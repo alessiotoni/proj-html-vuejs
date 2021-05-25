@@ -723,6 +723,7 @@ section.newsletter .container_input input[type=text] {
 .footer_top .col-4 h4 {
   color: #ffffff;
   text-transform: uppercase;
+  margin: 0 0 10px 10px;
 }
 .footer_top .col-4 ul {
   padding: 0 5px;

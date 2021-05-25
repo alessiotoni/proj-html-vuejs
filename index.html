@@ -75,7 +75,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sit amet consectetur adipisicing elit.</p>
                         <form action="" id="myform">
                             <input type="text" placeholder="Your Name*" name="name" required v-model="callBackData.name">
-                            <input type="text" placeholder="Eamil*" name="email"
+                            <input type="text" placeholder="Email*" name="email"
                             required v-model="callBackData.email">
                             <input type="text" placeholder="Telephone" name="telephone" v-model="callBackData.telephone">
                             <input type="text" placeholder="Location" name="location" v-model="callBackData.location">
@@ -185,7 +185,7 @@
                 </div>
             </section>
 
-            <section class="slider">
+            <section class="slider" tabindex="-1" @keyup.right="nextTestimonial()" @keyup.left="previousTestimonial()">
                 <div class="layover">
                     <div class="container">
                         <h2>Testimonials</h2>
