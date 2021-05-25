@@ -91,20 +91,23 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit tenetur consectetur dolorum amet dolore iure! Aliquam aut, labore asperiores quidem ducimus corrupti dolore, fugit mollitia porro necessitatibus esse placeat eum.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quis dignissimos deserunt neque quae, quaerat distinctio cupiditate facere ipsum nulla sunt illo laudantium voluptates eligendi veritatis animi maiores dolore. Dolorem.</p>
                     </div>
-                    <div class="card up col-6" @keyup.enter="requestACallback()">
+                    <div class="card up col-6">
                         <h3>first lesson free!</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sit amet consectetur adipisicing elit.</p>
-                        <form action="" id="myform">
+                        <form action="" id="myform" @submit.prevent="requestACallback()">
                             <input type="text" placeholder="Your Name*" name="name" required v-model="callBackData.name">
-                            <input type="text" placeholder="Email*" name="email"
+                            <input type="email" placeholder="Email*" name="email"
                             required v-model="callBackData.email">
                             <input type="text" placeholder="Telephone" name="telephone" v-model="callBackData.telephone">
                             <input type="text" placeholder="Location" name="location" v-model="callBackData.location">
+                            <button class="button_primary">submit</button>
                         </form>
-                        <input type="button" class="button_primary" value="REQUEST A CALLBACK" @click="requestACallback()">
                         <p class="required">I campi contrassegnati con * sono obbligatori</p>
                         <div v-if="requireReceived" class="required_received flex">
                             <p>Richiesta inviata correttamente</p>
+                        </div>
+                        <div v-else-if="!nameIsValid" class="required_received flex">
+                            <p style="text-transform: uppercase;">Caratteri non validi <i style="color: rgb(161, 7, 7)" class="fa fa-exclamation-triangle fa-3x" aria-hidden="true"></i></p>
                         </div>
                     </div>
                 </div>
@@ -217,7 +220,7 @@
                         <h2>Your Instructors</h2>
                         <div class="text flex">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia beatae reiciendis consectetur sed reprehenderit, veritatis alias animi similique ipsam.</p>
-                            <input type="button" class="button_primary" value="more about us">
+                            <button class="button_primary">more about us</button>
                         </div>
                         <div class="container_card flex">
                             <div class="card" v-for="item in instructors">
@@ -295,12 +298,14 @@
                     <h3>Sing up to our Newsletter</h3>
                     <div class="container_input">
 
-                        <input type="text" @keyup.enter="sendEmail()" v-model="emailForNewsletter">
+                        <input type="email" @keyup.enter="sendEmail()" v-model="emailForNewsletter">
+                        <button class="button_primary" @click="sendEmail()">subscribe</button>
                         
-                        <input type="button" class="button_primary" value="subscribe" @click="sendEmail()">
                     </div>
                     <p  class="received" v-if="emailReceived">Ti sei iscritto alla nostra Newsletter</p>
+                    <p  class="received" v-if="!emailIsValid">Email non valida <i style="color: rgb(161, 7, 7)" class="fa fa-exclamation-triangle" aria-hidden="true"></i></p>
                     <p>(Lorem ipsum, dolor sit amet consectetur adipisicing elit.)</p>
+                    
                 </div>
             </section>
 

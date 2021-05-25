@@ -222,17 +222,13 @@ section .container .card p.required {
   bottom: 2px;
   margin: 0;
 }
-section .container .card form input[type=text] {
+section .container .card form input, section .container .card form button {
   padding: 10px;
   border-radius: 4px;
   border: 1px solid #7f9ea8;
   width: 100%;
   margin-bottom: 20px;
   outline: none;
-}
-section .container .card form input[type=submit] {
-  padding-left: 20px;
-  padding-right: 20px;
 }
 section .container .card .required_received {
   border-radius: 8px;
@@ -354,7 +350,7 @@ section.cta .container i {
 }
 .row.instructors .text p {
   line-height: 30px;
-  width: 80%;
+  width: 75%;
 }
 .row.instructors .text .button_primary {
   padding-left: 30px;
@@ -624,15 +620,13 @@ section.newsletter .container_input {
   width: 60%;
   margin: 20px auto;
 }
-section.newsletter .container_input input {
-  width: 100%;
-  margin-bottom: 20px;
-}
-section.newsletter .container_input input[type=text] {
+section.newsletter .container_input input, section.newsletter .container_input button {
   padding: 10px;
   outline: none;
   border-radius: 4px;
   border: 0.5px solid #7f9ea8;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .footer_top {

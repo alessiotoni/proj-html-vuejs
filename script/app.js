@@ -123,6 +123,8 @@ const myApp = new Vue({
                 title: "Instructor Training"
             },
         ],
+        emailIsValid: true,
+        nameIsValid: true,
         emailsNewsletter: [],
         testimonialActive: 0,
         showCard: 0,
@@ -142,6 +144,18 @@ const myApp = new Vue({
 
 
     methods: {
+        isAString(string) {
+
+            for (let i = 0; i < string.length; i++) {
+
+                if (!Number.isNaN(parseInt(string[i]))) {
+
+                    return false;
+
+                }
+            }
+            return true
+        },
         showLearnMore(index) {
             this.showCard = index
         },
@@ -152,22 +166,50 @@ const myApp = new Vue({
             if (!this.emailForNewsletter) {
                 return;
             };
-            this.emailsNewsletter.push(this.emailForNewsletter);
-            this.emailForNewsletter = "";
+            
+            if (this.emailForNewsletter.includes('@')) {
 
-            this.emailReceived = true
+                this.emailsNewsletter.push(this.emailForNewsletter);
+                this.emailForNewsletter = "";
+    
+                this.emailReceived = true
+    
+                setTimeout(() => {
 
-            setTimeout(() => {
-                this.emailReceived = false
+                    this.emailReceived = false
+    
+                }, 2000)
+                
+            } else {
+                this.emailIsValid = false
 
-            }, 2000)
+                setTimeout(() => {
+
+                    this.emailIsValid = true
+    
+                }, 2000)
+            }
+
+
 
 
 
         },
         requestACallback() {
-            if (!this.callBackData.name || !this.callBackData.email) {
+
+            const nameUtent = this.callBackData.name
+            const isAString = this.isAString(nameUtent)
+            
+            if (!isAString) {
+
+                this.nameIsValid = false
+
+                setTimeout(() => {
+                    this.nameIsValid = true
+                }, 2000)
+
                 return
+                
             }
 
             this.utentCallBack.push(this.callBackData)
@@ -179,16 +221,15 @@ const myApp = new Vue({
                 location: "",
             };
 
-            this.callBackData = reset;
-
             this.requireReceived = true
+            
+            this.callBackData = reset;
 
             setTimeout(() => {
 
                 this.requireReceived = false
 
             }, 2000)
-
 
         },
         changePage(el, i){
