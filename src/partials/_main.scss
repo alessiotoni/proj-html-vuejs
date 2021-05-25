@@ -14,6 +14,7 @@ section {
             }
         }
         .card {
+            position: relative;
             box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.5);
             padding-top: $spacing*2;
             padding-bottom: $spacing*2;
@@ -26,6 +27,13 @@ section {
             p {
                 margin-bottom: $spacing*1.5;
                 color: $median_cut_quaternary;
+                &.required {
+                    font-size: $font_size*0.7;
+                    position: absolute;
+                    left: 2px;
+                    bottom: 2px;
+                    margin: 0;
+                }
             }
             form {
                 input[type="text"] {
@@ -40,6 +48,23 @@ section {
                     padding-left: $spacing;
                     padding-right: $spacing;
                 }
+            }
+            .required_received {
+                border-radius: 8px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-color: rgba($color: #000000, $alpha: .4);
+                // backdrop-filter: blur(10px);
+                align-items: center;
+                justify-content: center;
+                p {
+
+                    color: $color_cube_primary;
+                }
+                
             }
         }
         
@@ -422,6 +447,7 @@ section.new {
 }
 
 section.newsletter {
+    position: relative;
     background-image: url("/public/images/newsletter_background.jpg");
     background-size: 100%;
     background-position: center;
@@ -431,6 +457,13 @@ section.newsletter {
     }
     p {
         color: $median_cut_quaternary;
+    }
+    .received {
+        position: absolute;
+        top: 44%;
+        left: 50%;
+        transform: translatex(-50%);
+
     }
     .container_input {
         width: 60%;

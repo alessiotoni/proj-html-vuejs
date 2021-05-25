@@ -140,6 +140,10 @@ h2 {
   right: 0;
 }
 
+.hero nav ul li.active a {
+  color: #85b680;
+  border-bottom: 2px solid #85b680;
+}
 .hero nav ul li a {
   padding: 10px 0;
   color: #ffffff;
@@ -196,6 +200,7 @@ section .container .content p {
   color: #7f9ea8;
 }
 section .container .card {
+  position: relative;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   padding-top: 40px;
   padding-bottom: 40px;
@@ -210,6 +215,13 @@ section .container .card p {
   margin-bottom: 30px;
   color: #7f9ea8;
 }
+section .container .card p.required {
+  font-size: 11.2px;
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+  margin: 0;
+}
 section .container .card form input[type=text] {
   padding: 10px;
   border-radius: 4px;
@@ -221,6 +233,20 @@ section .container .card form input[type=text] {
 section .container .card form input[type=submit] {
   padding-left: 20px;
   padding-right: 20px;
+}
+section .container .card .required_received {
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+}
+section .container .card .required_received p {
+  color: #ffffff;
 }
 
 section.cta {
@@ -637,6 +663,7 @@ section.new .card .box_img_arrow img {
 }
 
 section.newsletter {
+  position: relative;
   background-image: url("/public/images/newsletter_background.jpg");
   background-size: 100%;
   background-position: center;
@@ -647,6 +674,12 @@ section.newsletter h3 {
 }
 section.newsletter p {
   color: #7f9ea8;
+}
+section.newsletter .received {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translatex(-50%);
 }
 section.newsletter .container_input {
   width: 60%;
@@ -665,7 +698,7 @@ section.newsletter .container_input input[type=text] {
 
 .footer_top {
   padding: 40px;
-  background-image: url(/images/footer-background-color.jpg?438fc15b7c579a372c0b1b5a6e7452c7);
+  background-image: url("/public/images/footer-background-color.jpg");
   background-size: 100%;
   background-position: center;
 }

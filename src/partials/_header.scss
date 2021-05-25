@@ -56,19 +56,27 @@
     }
     
 }
-.hero nav ul li a {
-    padding: ($spacing / 2) 0;
-    color: $color_cube_primary;
-    text-transform: uppercase;
-    font-size: $font_size*0.8;
-    font-weight: 600;
-    border-bottom: 2px solid transparent;
-    transition: all 0.4s;
-    &:hover {
+.hero nav ul li {
+    &.active a {
         color: $median_cut_terziary;
         border-bottom: 2px solid $median_cut_terziary;
     }
+    a {
+        padding: ($spacing / 2) 0;
+        color: $color_cube_primary;
+        text-transform: uppercase;
+        font-size: $font_size*0.8;
+        font-weight: 600;
+        border-bottom: 2px solid transparent;
+        transition: all 0.4s;
+        &:hover {
+            color: $median_cut_terziary;
+            border-bottom: 2px solid $median_cut_terziary;
+        }
+    
+    }
 }
+    
 span.new {
     display: inline-block;
     color: $color_cube_primary;
