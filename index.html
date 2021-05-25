@@ -149,7 +149,7 @@
                     </div>
                     
                     <div class="container flex" id="progress_bar">
-                        <div class="card">
+                        <div class="card brd_top">
 
                             <div class="box">
 
@@ -171,7 +171,7 @@
                             </div>
 
                         </div>
-                        <div class="card">
+                        <div class="card brd_top">
 
                             <div class="box">
 
@@ -193,7 +193,7 @@
                             </div>
 
                         </div>
-                        <div class="card">
+                        <div class="card brd_top">
 
                             <div class="box">
 
@@ -224,7 +224,7 @@
                             <button class="button_primary">more about us</button>
                         </div>
                         <div class="container_card flex">
-                            <div class="card" v-for="item in instructors">
+                            <div class="card brd_top" v-for="item in instructors">
                                 <div class="box_img">
                                     <img :src="item.img" alt="">
                                 </div>
@@ -267,7 +267,7 @@
 
             <section class="new">
                 <div class="container">
-                    <div class="card">
+                    <div class="card brd_top">
                         <h2>latest new</h2>
                             <div class="content flex">
                                 <div class="col-6">
@@ -297,6 +297,7 @@
 
             <section class="newsletter">
                 <div class="container">
+
                     <h3>Sing up to our Newsletter</h3>
                     <div class="container_input">
 
@@ -304,8 +305,11 @@
                         <button class="button_primary" @click="sendEmail()">subscribe</button>
                         
                     </div>
+
                     <p  class="received" v-if="emailReceived">Ti sei iscritto alla nostra Newsletter</p>
+
                     <p  class="received" v-if="!emailIsValid">Email non valida <i style="color: rgb(161, 7, 7)" class="fa fa-exclamation-triangle" aria-hidden="true"></i></p>
+
                     <p>(Lorem ipsum, dolor sit amet consectetur adipisicing elit.)</p>
                     
                 </div>

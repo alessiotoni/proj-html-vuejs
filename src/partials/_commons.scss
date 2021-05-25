@@ -36,6 +36,9 @@ h2 {
     p {
         color: $median_cut_quaternary;
     }
+    &.brd_top {
+        border-top: 8px solid $median_cut_terziary;
+    }
 }
 [class^="button_"] {
     border-radius: 20px;
@@ -47,7 +50,6 @@ h2 {
     &:hover {
         letter-spacing: 1.5px;
     }
-
 }
 .button_primary {
     border: none;
@@ -68,9 +70,6 @@ h2 {
 .col-4 {
     width: (100% / 12 * 4);
 }
-// .col-3 {
-//     width: calc(100% / 12 * 3);
-// }
 .mrg-0 {
     margin: 0;
 }

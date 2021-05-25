@@ -41,6 +41,12 @@ h2 {
 .card.up {
   margin-top: -80px;
 }
+.card p {
+  color: #7f9ea8;
+}
+.card.brd_top {
+  border-top: 8px solid #85b680;
+}
 
 [class^=button_] {
   border-radius: 20px;
@@ -215,7 +221,6 @@ section .container .card h3 {
 }
 section .container .card p {
   margin-bottom: 30px;
-  color: #7f9ea8;
 }
 section .container .card p.required {
   font-size: 11.2px;
@@ -337,45 +342,43 @@ section.cta .container i {
   left: 0;
   height: 80px;
 }
-
-.row.instructors {
+.learn_more .row.instructors {
   margin-bottom: 0;
 }
-.row.instructors h2 {
+.learn_more .row.instructors h2 {
   margin-bottom: 20px;
 }
-.row.instructors .text {
+.learn_more .row.instructors .text {
   justify-content: space-between;
   align-items: baseline;
   width: 100%;
 }
-.row.instructors .text p {
+.learn_more .row.instructors .text p {
   line-height: 30px;
   width: 75%;
 }
-.row.instructors .container_card {
+.learn_more .row.instructors .container_card {
   margin-top: 40px;
   margin-bottom: -80px;
   flex-wrap: nowrap;
 }
-.row.instructors .container_card .card:nth-child(2) {
+.learn_more .row.instructors .container_card .card:nth-child(2) {
   margin: 0 10px;
 }
-.row.instructors .container_card .card {
+.learn_more .row.instructors .container_card .card {
   background-color: #ffffff;
   flex-basis: calc(100% / 3);
-  border-top: 8px solid #85b680;
   transition: all 0.4s;
 }
-.row.instructors .container_card .card:hover {
+.learn_more .row.instructors .container_card .card:hover {
   flex-basis: calc(100% / 2.6);
 }
-.row.instructors .container_card .card .box_img {
+.learn_more .row.instructors .container_card .card .box_img {
   width: 100%;
   height: 120px;
   margin-bottom: 20px;
 }
-.row.instructors .container_card .card .box_img img {
+.learn_more .row.instructors .container_card .card .box_img img {
   position: relative;
   top: 0;
   left: 0;
@@ -386,20 +389,20 @@ section.cta .container i {
   -o-object-position: center;
      object-position: center;
 }
-.row.instructors .container_card .card h4 {
+.learn_more .row.instructors .container_card .card h4 {
   color: #3f4843;
   text-transform: capitalize;
   margin-bottom: 20px;
 }
-.row.instructors .container_card .card #descr_instructor {
+.learn_more .row.instructors .container_card .card #descr_instructor {
   line-height: 30px;
   margin: 0;
 }
-.row.instructors .container_card .card .box_icon {
+.learn_more .row.instructors .container_card .card .box_icon {
   color: #7f9ea8;
   margin-bottom: 20px;
 }
-.row.instructors .container_card .card .box_icon i {
+.learn_more .row.instructors .container_card .card .box_icon i {
   margin: 0 6.6666666667px;
   padding: 6.6666666667px;
   cursor: pointer;
@@ -412,7 +415,6 @@ section.cta .container i {
   margin-bottom: 40px;
 }
 #progress_bar .card {
-  border-top: 8px solid #79b27b;
   flex-basis: 33.3333333333%;
   transition: all 0.4s;
 }
@@ -545,7 +547,7 @@ section.new {
 section.new .card {
   padding-bottom: 0;
   margin-top: -150px;
-  border-top: 8px solid #7f9ea8;
+  border-color: #7f9ea8;
   border-radius: 8px 8px 0 0;
   position: relative;
 }
@@ -602,7 +604,7 @@ section.newsletter p {
 }
 section.newsletter .received {
   position: absolute;
-  top: 44%;
+  top: 48%;
   left: 50%;
   transform: translatex(-50%);
 }
@@ -610,13 +612,15 @@ section.newsletter .container_input {
   width: 60%;
   margin: 20px auto;
 }
-section.newsletter .container_input input, section.newsletter .container_input button {
+section.newsletter .container_input input {
   padding: 10px;
   outline: none;
   border-radius: 4px;
   border: 0.5px solid #7f9ea8;
-  width: 100%;
   margin-bottom: 20px;
+}
+section.newsletter .container_input input, section.newsletter .container_input button {
+  width: 100%;
 }
 
 .footer_top {
