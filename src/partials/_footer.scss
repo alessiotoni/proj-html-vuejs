@@ -1,0 +1,75 @@
+
+.footer_top {
+    padding: $spacing*2;
+    background-image: url("../../public/images/footer-background-color.jpg");
+    background-size: 100%;
+    background-position: center;
+    .col-4 {
+        .box_logo {
+            width: 100%;
+            img {
+                width: 90%;
+            }
+        }
+        &.grid {
+            text-align: center;
+            img {
+                max-width: 100%;
+                margin-bottom: $spacing;
+            }
+        }
+        p {
+            margin-top: $spacing;
+            padding-right: $spacing/2;
+            color: $median_cut_quaternary;
+        }
+        h4 {
+            color: $color_cube_primary;
+            text-transform: uppercase;
+        }
+        ul {
+            padding: 0 $spacing/4;
+            color: $median_cut_quaternary;
+            li {
+                border-radius: 4px;
+                cursor: pointer;
+                padding: $spacing/2 0;
+                &:hover {
+                    background-color: $median_cut_primary;
+                }
+                span {
+                    vertical-align: text-top;
+                    display: inline-block;
+                }
+                i {
+                    margin-right: $spacing/2;
+                    margin-left: $spacing/4;
+                }
+                a {
+                    color: $median_cut_quaternary;
+                }
+            }
+            &.courses {
+                color: $color_cube_terziary;
+                a {
+                color: $color_cube_terziary;
+
+                }
+            }
+        }
+        
+    }
+}
+
+.footer_down {
+    text-align: center;
+    padding: $spacing*2;
+    background-color: $color_cube_quaternary;
+    p {
+        color: $median_cut_quaternary;
+
+        a {
+            color: $material_design_quinary;
+        }
+    }
+}

@@ -111,6 +111,24 @@ const myApp = new Vue({
                 name: "harold jones",
             },
         ],
+        footerLinks: [
+            {
+                icon: "<i class='fa fa-arrow-circle-o-right' aria-hidden='true'></i>",
+                title: "Pass plus"
+            },
+            {
+                icon: "<i class='fa fa-arrow-circle-o-right' aria-hidden='true'></i>",
+                title: "Intensive Course"
+            },
+            {
+                icon: "<i class='fa fa-arrow-circle-o-right' aria-hidden='true'></i>",
+                title: "Automatic"
+            },
+            {
+                icon: "<i class='fa fa-arrow-circle-o-right' aria-hidden='true'></i>",
+                title: "Instructor Training"
+            },
+        ],
         testimonialActive: 0,
         showCard: 0,
     },

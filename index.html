@@ -240,7 +240,56 @@
         </main>
 
         <footer>
-            
+            <div class="footer_top">
+                <div class="container flex">
+                    <div class="col-4">
+                        <div class="box_logo">
+                            <img src="/public/images/avada-drivers-logo-2x-200x39.png" alt="">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, architecto repellat praesentium quia ut id, molestias distinctio laborum enim ipsum sapiente exercitationem placeat? Saepe eligendi numquam facilis quos consequuntur aperiam?</p>
+                    </div>
+                    <div class="col-4">
+                        <h4>contact details</h4>
+                        <ul>
+                            <li>
+                                <span><i class="fa fa-home" aria-hidden="true"></i></span>
+                                <span>1234 Nort Main Street, <br> New Yorn NY 555555</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-phone" aria-hidden="true"></i></i></span>
+                                <span>1.800.500.5555</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                                <span>info@your-domain.com</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-link" aria-hidden="true"></i></span>
+                                <span><a href="#">theme-Fusion.com</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h4>Courses</h4>
+                        <ul class="courses">
+                            <li v-for="item in footerLinks">
+                                <span><i class='fa fa-arrow-circle-o-right' aria-hidden='true'></i></span>
+                                <span><a href="#">{{item.title}}</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4 grid">
+                        <img src="/public/images/footer-ad-grid-400x357.png" alt="">
+                        <input type="button" value="book now" class="button_primary">
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer_down">
+                <div class="container">
+                    <p><i class="fa fa-copyright" aria-hidden="true"></i> Copyright 2012 - 2020 | Avada Theme by <a href="#">ThemeFusion</a> | All Rights Reserved | Powered by <a href="#">WordPress</a></p>
+                </div>
+            </div>
         </footer>
     </div>
     <script src="/script/app.js"></script>
