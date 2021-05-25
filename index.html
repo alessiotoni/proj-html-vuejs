@@ -34,11 +34,11 @@
             </div>
 
             <div class="hero">
-                <img src="/public/images/homepage-hero-background.jpg" alt="">
+                <img src="../../public/images/homepage-hero-background.jpg" alt="">
                 <nav>
                     <div class="container flex">
                         <div class="brand">
-                            <img src="/public/images/avada-drivers-logo-1x.png" alt="">
+                            <img src="../../public/images/avada-drivers-logo-1x.png" alt="">
                         </div>
                         <ul class="flex">
                             <li v-for="link in navbarLinks">
@@ -81,7 +81,7 @@
             </section>
 
             <section class="cta">
-                <img src="/public/images/horizontal-cta-background.jpg" alt="">
+                <img src="../../public/images/horizontal-cta-background.jpg" alt="">
                 <div class="container flex">
                     <div class="text">
                         <h2>start learning to drive today</h2>
@@ -111,7 +111,7 @@
                             <h4>{{item.title}}</h4>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, adipisci quo illum eaque laborum at, maxime vero veritatis facilis voluptatibus explicabo obcaecati aspernatur! Deleniti quo commodi rem minima placeat quisquam.</p>
                             <input type="button" class="button_primary" value="COURSE INFORMATION">
-                            <img v-if="item.status == 'new'" src="/public/images/new-corner.jpg" alt="">
+                            <img v-if="item.status == 'new'" src="../../public/images/new-corner.jpg" alt="">
                         </div>
                     </div>
                     <div class="row percentual">
@@ -196,7 +196,52 @@
                 </div>
             </section>
 
+            <section class="new">
+                <div class="container">
+                    <div class="card">
+                        <h2>latest new</h2>
+                            <div class="content flex">
+                                <div class="col-6">
+                                    <div class="box_img">
+                                        <img src="./public/images/blog-choosecar-700x441.jpg" alt="">
+                                    </div>
+                                    <h4>what car start with?</h4>
+                                    <p class="date">February 7th, 2019 | <span>0 Comments</span></p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                                <div class="col-6">
+                                    <div class="box_img">
+                                        <img src="./public/images/blogpost-10and2-700x441.jpg" alt="">
+                                    </div>
+                                    <h4>avada driving school expanding</h4>
+                                    <p class="date">February 7th, 2019 | <span>0 Comments</span></p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        <div class="box_img_arrow">    
+                            <img src="/public/images/latestnews-bottom-1200x105.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="newsletter">
+                <div class="container">
+                    <h3>Sing up to our Newsletter</h3>
+                    <div class="container_input">
+
+                        <input type="text">
+                        <input type="button" class="button_primary" value="subscribe">
+                    </div>
+                    <p>(Lorem ipsum, dolor sit amet consectetur adipisicing elit.)</p>
+                </div>
+            </section>
+
         </main>
+
+        <footer>
+            
+        </footer>
     </div>
     <script src="/script/app.js"></script>
 </body>

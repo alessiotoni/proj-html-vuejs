@@ -281,7 +281,7 @@ section.cta .container i {
   color: #7f9ea8;
 }
 .learn_more .background {
-  background-image: url("/public/images/promise-background.jpg");
+  background-image: url(/images/promise-background.jpg?01e43a56d7d1feffdf2927db592f8761);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom left;
@@ -521,14 +521,13 @@ section.cta .container i {
 }
 section.slider {
   text-align: center;
-  background-image: url("/public/images/strada-alberata.jpeg");
+  background-image: url(/images/testimonial-background.jpg?29c9e2fd51bf953e4295c2c0eefb9873);
   background-position: center;
 }
 section.slider .layover {
   padding: 40px 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(238, 232, 232, 0.7);
 }
 section.slider .layover p {
   color: #484848;
@@ -579,4 +578,87 @@ section.slider .layover .box_circle .circle {
 }
 section.slider .layover .box_circle .circle.bg {
   background-color: #484848;
+}
+
+section.new {
+  background-image: url(/images/latestnews-background.jpg?3c1efaf0f18c14999d471c95e0499ea9);
+  background-size: 100%;
+  background-position: center;
+  padding: 80px;
+}
+section.new .card {
+  padding: 40px 0 0 0;
+  margin-top: -150px;
+  border-top: 8px solid #7f9ea8;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+}
+section.new .card h2 {
+  color: #3f4843;
+  text-transform: capitalize;
+}
+section.new .card .content .col-6 {
+  margin: 0 10px;
+  padding: 10px;
+}
+section.new .card .content .col-6 .box_img {
+  width: 100%;
+  height: 200px;
+}
+section.new .card .content .col-6 .box_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+section.new .card .content .col-6 h4 {
+  color: #d6c9b0;
+  margin: 20px 0 10px 0;
+  text-transform: capitalize;
+  font-size: 20.8px;
+}
+section.new .card .content .col-6 .date {
+  font-size: 12.8px;
+}
+section.new .card .content .col-6 .date span {
+  color: #d6c9b0;
+}
+section.new .card .box_img_arrow {
+  position: absolute;
+  left: 0;
+  bottom: -85px;
+  width: 100%;
+}
+section.new .card .box_img_arrow img {
+  width: 100%;
+}
+
+section.newsletter {
+  background-image: url("/public/images/newsletter_background.jpg");
+  background-size: 100%;
+  background-position: center;
+  text-align: center;
+}
+section.newsletter h3 {
+  color: #484848;
+}
+section.newsletter p {
+  color: #7f9ea8;
+}
+section.newsletter .container_input {
+  width: 60%;
+  margin: 20px auto;
+}
+section.newsletter .container_input input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+section.newsletter .container_input input[type=text] {
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+  border: 0.5px solid #7f9ea8;
 }
