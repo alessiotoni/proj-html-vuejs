@@ -25,6 +25,11 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  font-size: 27.2px;
+  color: #3f4843;
+}
+
 .card {
   position: relative;
   border-radius: 8px;
@@ -66,6 +71,10 @@ a {
 
 .col-4 {
   width: 33.3333333333%;
+}
+
+.mrg-0 {
+  margin: 0;
 }
 
 .top_header {
@@ -180,7 +189,6 @@ section .container .content {
 section .container .content h2 {
   text-transform: capitalize;
   margin-bottom: 40px;
-  font-size: 27.2px;
   color: #3f4843;
 }
 section .container .content p {
@@ -240,6 +248,7 @@ section.cta .container {
 section.cta .container h2 {
   text-transform: capitalize;
   margin-bottom: 10px;
+  color: #ffffff;
 }
 section.cta .container i {
   margin-right: 20px;
@@ -294,6 +303,7 @@ section.cta .container i {
   overflow: hidden;
 }
 .learn_more .row .card.col-4 h4 {
+  font-size: 25.6px;
   text-transform: capitalize;
   margin-bottom: 20px;
 }
@@ -302,6 +312,77 @@ section.cta .container i {
   top: 0;
   left: 0;
   height: 80px;
+}
+
+.row.instructors {
+  margin-bottom: 0;
+}
+.row.instructors h2 {
+  margin-bottom: 20px;
+}
+.row.instructors .text {
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+.row.instructors .text p {
+  width: 80%;
+}
+.row.instructors .text .button_primary {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.row.instructors .container_card {
+  margin-top: 40px;
+  margin-bottom: -80px;
+  flex-wrap: nowrap;
+}
+.row.instructors .container_card .card:nth-child(2) {
+  margin: 0 10px;
+}
+.row.instructors .container_card .card {
+  text-align: center;
+  background-color: #ffffff;
+  flex-basis: calc(100% / 3);
+  border-top: 8px solid #85b680;
+  transition: all 0.4s;
+}
+.row.instructors .container_card .card:hover {
+  flex-basis: calc(100% / 2.6);
+}
+.row.instructors .container_card .card .box_img {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 20px;
+}
+.row.instructors .container_card .card .box_img img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.row.instructors .container_card .card h4 {
+  color: #3f4843;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.row.instructors .container_card .card #descr_instructor {
+  line-height: 30px;
+  margin: 0;
+}
+.row.instructors .container_card .card .box_icon {
+  color: #7f9ea8;
+  margin-bottom: 20px;
+}
+.row.instructors .container_card .card .box_icon i {
+  margin: 0 6.6666666667px;
+  padding: 6.6666666667px;
+  cursor: pointer;
 }
 
 .percentual .container {
@@ -437,4 +518,65 @@ section.cta .container i {
     z-index: 100;
     transform: rotate(315deg);
   }
+}
+section.slider {
+  text-align: center;
+  background-image: url("/public/images/strada-alberata.jpeg");
+  background-position: center;
+}
+section.slider .layover {
+  padding: 40px 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(238, 232, 232, 0.7);
+}
+section.slider .layover p {
+  color: #484848;
+  margin-top: 30px;
+}
+section.slider .layover p.description {
+  height: 100px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+section.slider .layover .slide {
+  text-align: center;
+  margin: auto;
+  max-width: 700px;
+  padding: 40px 0;
+}
+section.slider .layover .slide .box_img {
+  margin: auto;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+section.slider .layover .slide .box_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+section.slider .layover .slide h3 {
+  margin: 10px 0 40px 0;
+  text-transform: capitalize;
+  color: #484848;
+}
+section.slider .layover .box_circle {
+  align-items: center;
+  justify-content: center;
+}
+section.slider .layover .box_circle .circle {
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+  margin: 0 10px;
+  border-radius: 50%;
+  border: 1px solid #484848;
+}
+section.slider .layover .box_circle .circle.bg {
+  background-color: #484848;
 }

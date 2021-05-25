@@ -6,7 +6,6 @@ section {
             h2 {
                 text-transform: capitalize;
                 margin-bottom: $spacing*2;
-                font-size: $font_size*1.7;
                 color: $median_cut_secondary;
             }
             p {
@@ -69,6 +68,8 @@ section.cta {
         h2 {
             text-transform: capitalize;
             margin-bottom: $spacing/2;
+        color: $color_cube_primary;
+
         }
         i {
             margin-right: $spacing;
@@ -122,6 +123,8 @@ section.cta {
             overflow: hidden;
             &.col-4 {
                 h4 {
+                font-size: $font_size*1.6;
+
                     text-transform: capitalize;
                     margin-bottom: $spacing;
                 }
@@ -132,7 +135,79 @@ section.cta {
                 left: 0;
                 height: 80px;
             }
-    
+            
+        }
+        
+    }
+}
+
+.row.instructors {
+    margin-bottom: 0;
+    h2 {
+        margin-bottom: $spacing;    
+    }
+    .text {
+        justify-content: space-between;
+        align-items: baseline;
+
+        p {
+            width: 80%;
+        }
+        width: 100%;
+        .button_primary  {
+            padding-left: $spacing*1.5;
+            padding-right: $spacing*1.5;
+        }
+    }
+    .container_card {
+        margin-top: $spacing*2;
+        margin-bottom: -($spacing*4);
+        flex-wrap: nowrap;
+        .card:nth-child(2) {
+            margin: 0 ($spacing/2);
+        }
+        .card {
+            text-align: center;
+            background-color: $color_cube_primary;
+            flex-basis: calc(100% / 3);
+            border-top: 8px solid $median_cut_terziary;
+            transition: all 0.4s;
+            &:hover {
+                flex-basis: calc(100% / 2.6);
+            }
+            .box_img {
+                width: 100%;
+                height: 120px;
+                margin-bottom: $spacing;
+                img {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+            h4 {
+                color: $median_cut_secondary;
+                text-transform: capitalize;
+                margin-bottom: $spacing;
+
+            }
+            #descr_instructor {
+                line-height: $spacing*1.5;
+                margin: 0;
+            }
+            .box_icon {
+                color: $median_cut_quaternary;
+                margin-bottom: $spacing;
+                i {
+                    margin: 0 $spacing/3;
+                    padding: $spacing/3;
+                    cursor: pointer;
+                }
+            }
         }
     }
 }
@@ -222,4 +297,71 @@ section.cta {
 
     100% {
         z-index: 100;transform: rotate(315deg);}
+}
+
+
+
+section.slider {
+    text-align: center;
+    background-image: url("/public/images/strada-alberata.jpeg");
+    background-position: center;
+    .layover {
+        padding: ($spacing*2) 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #eee8e8, $alpha: 0.7);
+        p {
+            color: $color_cube_secondary;
+            margin-top: $spacing*1.5;
+            
+            &.description {
+                height: 100px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+        }
+        .slide {
+            text-align: center;
+            margin: auto;
+            max-width: 700px;
+            padding: ($spacing*2) 0;
+            .box_img {
+                margin: auto;
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+            h3 {
+                margin: ($spacing*0.5) 0 ($spacing*2) 0;
+                text-transform: capitalize;
+                color: $color_cube_secondary;
+
+
+            }
+        }
+        .box_circle {
+            align-items: center;
+            justify-content: center;
+            .circle {
+                cursor: pointer;
+                width: 13px;
+                height: 13px;
+                margin: 0 ($spacing/2);
+                border-radius: 50%;
+                border: 1px solid $color_cube_secondary;
+                &.bg {
+                    background-color: $color_cube_secondary;
+                }
+            }
+        }
+        
+    }
 }

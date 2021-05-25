@@ -148,7 +148,51 @@
                         </div>
                 
                     </div>
+                    <div class="row instructors">
+                        <h2>Your Instructors</h2>
+                        <div class="text flex">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia beatae reiciendis consectetur sed reprehenderit, veritatis alias animi similique ipsam pariatur obcaecati facere voluptatem eum a in aperiam, delectus neque cum.</p>
+                            <input type="button" class="button_primary" value="more about us">
+                        </div>
+                        <div class="container_card flex">
+                            <div class="card" v-for="item in instructors">
+                                <div class="box_img">
+                                    <img :src="item.img" alt="">
+                                </div>
+                                <h4>{{item.name}}</h4>
+                                <div class="box_icon">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+
+                                </div>
+                                <p id="descr_instructor">{{item.description}}</p>
+                                
+
+                            </div>
+                        </div>
+                    </div>
                     
+                </div>
+            </section>
+
+            <section class="slider">
+                <div class="layover">
+                    <div class="container">
+                        <h2>Testimonials</h2>
+                        <p>Here's what our happy drivers had to say about our services:</p>
+                        <div v-if="index == testimonialActive"class="slide" v-for="item,index in testimonials">
+                            <div class="box_img">
+                                <img :src="item.img" alt="">
+                            </div>
+                            <p class="description">{{item.description}}</p>
+                            <h3>{{item.name}}</h3>
+                        </div>
+                        <div class="box_circle flex">
+                            <div class="circle" :class="{bg : (index == testimonialActive)}" v-for="item, index in testimonials" @click="changeTestimonials(item, index)"></div>
+                        </div>
+
+                    </div>
                 </div>
             </section>
 
