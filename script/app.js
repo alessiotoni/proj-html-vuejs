@@ -86,7 +86,7 @@ const myApp = new Vue({
         testimonials: [
             {
                 img: "./public/images/testimonial-sophia.png",
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit sit amet consectetur adipisicing elit.",
+                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit sit sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit sit sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit",
                 name: "sophia jones",
             },
             {

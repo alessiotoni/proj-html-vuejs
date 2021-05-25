@@ -5,7 +5,7 @@
 }
 
 html {
-  font-family: "KoHo", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -307,7 +307,7 @@ section.cta .container i {
   color: #7f9ea8;
 }
 .learn_more .background {
-  background-image: url(/images/promise-background.jpg?01e43a56d7d1feffdf2927db592f8761);
+  background-image: url("/public/images/promise-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom left;
@@ -765,4 +765,52 @@ section.newsletter .container_input input[type=text] {
 }
 .footer_down p a {
   color: #d2b899;
+}
+
+.btn_fixed {
+  position: fixed;
+  right: 20px;
+  top: 120px;
+  z-index: 10;
+}
+.btn_fixed div {
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  border-radius: 4px;
+  background-color: #d3cdcd;
+  margin-bottom: 10px;
+}
+.btn_fixed div p {
+  font-size: 11.2px;
+}
+.btn_fixed div.fixed_first {
+  color: #484848;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btn_fixed div.fixed_first i {
+  margin-bottom: 6.6666666667px;
+}
+.btn_fixed div.fixed_second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btn_fixed div.fixed_second .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.btn_fixed div.fixed_second .content .color {
+  color: #79b27b;
+}
+.btn_fixed div.fixed_second .content i {
+  font-size: 8px;
 }
