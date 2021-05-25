@@ -4,7 +4,6 @@ section {
         .content {
             padding: $spacing;
             h2 {
-                text-transform: capitalize;
                 margin-bottom: $spacing*2;
                 color: $median_cut_secondary;
             }
@@ -26,7 +25,6 @@ section {
             }
             p {
                 margin-bottom: $spacing*1.5;
-                color: $median_cut_quaternary;
                 &.required {
                     font-size: $font_size*0.7;
                     position: absolute;
@@ -36,7 +34,7 @@ section {
                 }
             }
             form {
-                input, button {
+                input {
                     padding: $spacing / 2;
                     border-radius: 4px;
                     border: 1px solid $median_cut_quaternary;
@@ -86,7 +84,6 @@ section.cta {
         align-items: center;
         justify-content: space-between;
         h2 {
-            text-transform: capitalize;
             margin-bottom: $spacing/2;
         color: $color_cube_primary;
 
@@ -145,9 +142,8 @@ section.cta {
             &.col-4 {
                 h4 {
                 font-size: $font_size*1.6;
-
-                    text-transform: capitalize;
-                    margin-bottom: $spacing;
+                text-transform: capitalize;
+                margin-bottom: $spacing;
                 }
             }
             img {
@@ -155,10 +151,8 @@ section.cta {
                 top: 0;
                 left: 0;
                 height: 80px;
-            }
-            
+            }  
         }
-        
     }
 }
 
@@ -170,15 +164,10 @@ section.cta {
     .text {
         justify-content: space-between;
         align-items: baseline;
-
+        width: 100%;
         p {
             line-height: 30px;
             width: 75%;
-        }
-        width: 100%;
-        .button_primary  {
-            padding-left: $spacing*1.5;
-            padding-right: $spacing*1.5;
         }
     }
     .container_card {
@@ -189,7 +178,6 @@ section.cta {
             margin: 0 ($spacing/2);
         }
         .card {
-            text-align: center;
             background-color: $color_cube_primary;
             flex-basis: calc(100% / 3);
             border-top: 8px solid $median_cut_terziary;
@@ -242,7 +230,6 @@ section.cta {
     .card {
         border-top: 8px solid $color_cube_terziary;
         flex-basis: (100% / 3);
-        text-align: center;
         transition: all 0.4s;
         &:hover {
             flex-basis: (100% / 2.7);
@@ -269,7 +256,6 @@ section.cta {
         }
     }
 }
-
 
 svg {
     position: relative;
@@ -366,7 +352,6 @@ section.slider {
                 }
             }
         }
-        
     }
 }
 
@@ -377,16 +362,11 @@ section.new {
     background-position: center;
     padding: $spacing*4;
     .card {
-        padding: $spacing*2 0 0 0;
+        padding-bottom: 0;
         margin-top: -150px;
         border-top: 8px solid $median_cut_quaternary;
-        text-align: center;
         border-radius: 8px 8px 0 0;
         position: relative;
-        h2 {
-            color: $median_cut_secondary;
-            text-transform: capitalize;
-        }
         .content {
             .col-6 {
                 margin: 0 $spacing/2;
@@ -450,16 +430,12 @@ section.newsletter {
         width: 60%;
         margin: $spacing auto;
         input, button {
-            
-                padding: $spacing/2;
-                outline: none;
-                border-radius: 4px;
-                border: 0.5px solid $median_cut_quaternary;
-            
+            padding: $spacing/2;
+            outline: none;
+            border-radius: 4px;
+            border: 0.5px solid $median_cut_quaternary;
             width: 100%;
             margin-bottom: $spacing;
         }
-        
     }
-
 }

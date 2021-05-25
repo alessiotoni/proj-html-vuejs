@@ -100,7 +100,7 @@
                             required v-model="callBackData.email">
                             <input type="text" placeholder="Telephone" name="telephone" v-model="callBackData.telephone">
                             <input type="text" placeholder="Location" name="location" v-model="callBackData.location">
-                            <button class="button_primary">submit</button>
+                            <button class="button_primary">request a callback</button>
                         </form>
                         <p class="required">I campi contrassegnati con * sono obbligatori</p>
                         <div v-if="requireReceived" class="required_received flex">
@@ -216,6 +216,7 @@
 
                         </div>
                     </div>
+
                     <div class="row instructors">
                         <h2>Your Instructors</h2>
                         <div class="text flex">
@@ -286,6 +287,7 @@
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                             </div>
+                            <button class="button_primary">more from the blog</button>
                         <div class="box_img_arrow">    
                             <img src="./public/images/latestnews-bottom-1200x105.png" alt="">
                         </div>

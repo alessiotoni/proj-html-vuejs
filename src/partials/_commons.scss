@@ -22,7 +22,7 @@ a {
 h2 {
     font-size: $font_size*1.7;
     color: $median_cut_secondary;
-
+    text-transform: capitalize;
 }
 .card {
     position: relative;
@@ -33,7 +33,9 @@ h2 {
     &.up {
         margin-top: -80px;
     }
-
+    p {
+        color: $median_cut_quaternary;
+    }
 }
 [class^="button_"] {
     border-radius: 20px;
@@ -51,6 +53,8 @@ h2 {
     border: none;
     color: $color_cube_primary;
     background-color: $median_cut_terziary;
+    padding-left: $spacing*1.5;
+    padding-right: $spacing*1.5;
     
 }
 .button_secondary {
