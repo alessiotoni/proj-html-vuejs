@@ -95,18 +95,18 @@
                         <h3>first lesson free!</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sit amet consectetur adipisicing elit.</p>
                         <form action="" id="myform" @submit.prevent="requestACallback()">
-                            <input type="text" placeholder="Your Name*" name="name" required v-model="callBackData.name">
-                            <input type="email" placeholder="Email*" name="email"
-                            required v-model="callBackData.email">
+                            <input type="text" placeholder="Your Name*" name="name" v-model="callBackData.name" :class="{outline : requestDataName}">
+                            <input type="text" placeholder="Email*" name="email"
+                            v-model="callBackData.email" :class="{outline : requestDataEmail}">
                             <input type="text" placeholder="Telephone" name="telephone" v-model="callBackData.telephone">
                             <input type="text" placeholder="Location" name="location" v-model="callBackData.location">
                             <button class="button_primary">request a callback</button>
                         </form>
                         <p class="required">I campi contrassegnati con * sono obbligatori</p>
-                        <div v-if="requireReceived" class="required_received flex">
-                            <p>Richiesta inviata correttamente</p>
+                        <div v-if="requireReceived" class="overlay flex card">
+                            <p>Richiesta inviata correttamente <br> A breve riceverai una email di conferma</p>
                         </div>
-                        <div v-else-if="!nameIsValid" class="required_received flex">
+                        <div v-else-if="!dataIsValid" class="overlay flex card">
                             <p style="text-transform: uppercase;">Caratteri non validi <i style="color: rgb(161, 7, 7)" class="fa fa-exclamation-triangle fa-3x" aria-hidden="true"></i></p>
                         </div>
                     </div>
@@ -275,7 +275,7 @@
                                         <img src="./public/images/blog-choosecar-700x441.jpg" alt="">
                                     </div>
                                     <h4>what car start with?</h4>
-                                    <p class="date">February 7th, 2019 | <span>0 Comments</span></p>
+                                    <p class="date">February 7th, 2019 | <a href="#">0 Comments</a></p>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                                 <div class="col-6">
@@ -283,7 +283,7 @@
                                         <img src="./public/images/blogpost-10and2-700x441.jpg" alt="">
                                     </div>
                                     <h4>avada driving school expanding</h4>
-                                    <p class="date">February 7th, 2019 | <span>0 Comments</span></p>
+                                    <p class="date">February 7th, 2019 | <a href="#">0 Comments</a></p>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                             </div>

@@ -117,7 +117,6 @@ h2 {
 
 .hero nav .container {
   justify-content: space-between;
-  align-items: center;
 }
 
 .hero nav .brand {
@@ -237,19 +236,20 @@ section .container .card form input {
   margin-bottom: 20px;
   outline: none;
 }
-section .container .card .required_received {
-  border-radius: 8px;
+section .container .card form input.outline {
+  outline-style: auto;
+  outline-color: red;
+}
+section .container .card.overlay {
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  align-items: center;
   justify-content: center;
 }
-section .container .card .required_received p {
-  color: #ffffff;
+section .container .card.overlay p {
+  color: #7f9ea8;
 }
 
 section.cta {
@@ -446,7 +446,7 @@ svg {
   width: 150px;
   height: 150px;
   z-index: 10;
-  transform: rotate(273deg);
+  transform: rotate(270deg);
 }
 svg circle {
   width: 100%;
@@ -576,8 +576,11 @@ section.new .card .content .col-6 h4 {
 section.new .card .content .col-6 .date {
   font-size: 12.8px;
 }
-section.new .card .content .col-6 .date span {
+section.new .card .content .col-6 .date a {
   color: #d6c9b0;
+}
+section.new .card .content .col-6 .date a:hover {
+  text-decoration: underline;
 }
 section.new .card .box_img_arrow {
   position: absolute;
@@ -692,6 +695,9 @@ section.newsletter .container_input input, section.newsletter .container_input b
 }
 .footer_down p a {
   color: #d2b899;
+}
+.footer_down p a:hover {
+  text-decoration: underline;
 }
 
 .btn_fixed {

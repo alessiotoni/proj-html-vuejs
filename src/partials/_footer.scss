@@ -72,6 +72,9 @@
 
         a {
             color: $material_design_quinary;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }

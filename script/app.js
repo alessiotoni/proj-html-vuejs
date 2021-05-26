@@ -123,13 +123,20 @@ const myApp = new Vue({
                 title: "Instructor Training"
             },
         ],
-        emailIsValid: true,
-        nameIsValid: true,
         emailsNewsletter: [],
-        testimonialActive: 0,
-        showCard: 0,
+        utentCallBack: [],
+
+        emailIsValid: true,
+        dataIsValid: true,
         requireReceived: false,
         emailReceived: false,
+        requestDataName: false,
+        requestDataEmail: false,
+
+        testimonialActive: 0,
+        showCard: 0,
+        pageActive: 0,
+
         emailForNewsletter: "",
         callBackData: {
             name: "",
@@ -137,14 +144,16 @@ const myApp = new Vue({
             telephone: "",
             location: "",
         },
-        utentCallBack: [],
-        pageActive: 0,
 
     },
 
 
     methods: {
         isAString(string) {
+
+            if (string == "") {
+                return false
+            }
 
             for (let i = 0; i < string.length; i++) {
 
@@ -156,6 +165,12 @@ const myApp = new Vue({
             }
             return true
         },
+        isAEmail(string){
+            if (string.includes("@")) {
+                return true
+            }
+            return false
+        },
         showLearnMore(index) {
             this.showCard = index
         },
@@ -166,8 +181,10 @@ const myApp = new Vue({
             if (!this.emailForNewsletter) {
                 return;
             };
+
+            const isAEmail = this.isAEmail(this.emailForNewsletter)
             
-            if (this.emailForNewsletter.includes('@')) {
+            if (isAEmail) {
 
                 this.emailsNewsletter.push(this.emailForNewsletter);
                 this.emailForNewsletter = "";
@@ -197,15 +214,28 @@ const myApp = new Vue({
         },
         requestACallback() {
 
-            const nameUtent = this.callBackData.name
-            const isAString = this.isAString(nameUtent)
-            
-            if (!isAString) {
+            const utent = this.callBackData
+            const isAString = this.isAString(utent.name)
+            const isAEmail = this.isAEmail(utent.email)
 
-                this.nameIsValid = false
+            if (!isAString || !isAEmail) {
+
+                this.dataIsValid = false
+
+                if (!isAString) {
+                    this.requestDataName = true
+                } else {
+                    this.requestDataName = false
+                }
+
+                if (!isAEmail) {
+                    this.requestDataEmail = true
+                } else {
+                    this.requestDataEmail = false
+                }
 
                 setTimeout(() => {
-                    this.nameIsValid = true
+                    this.dataIsValid = true
                 }, 2000)
 
                 return
@@ -222,6 +252,8 @@ const myApp = new Vue({
             };
 
             this.requireReceived = true
+            this.requestDataName = false
+            this.requestDataEmail = false
             
             this.callBackData = reset;
 
