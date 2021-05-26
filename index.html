@@ -282,6 +282,7 @@
                                         <ul v-else>
                                             <li v-for="comment,index in commentsListFirst"><span>{{index + 1}})</span> {{comment}}</li>
                                         </ul>
+                                        <div class="close flex" @click="closeComments(first)"><i class="fa fa-times" aria-hidden="true"></i></div>
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -296,6 +297,7 @@
                                         <ul v-else>
                                             <li v-for="comment,index in commentsListSecond"><span>{{index + 1}})</span> {{comment}}</li>
                                         </ul>
+                                        <div class="close flex" @click="closeComments(second)"><i class="fa fa-times" aria-hidden="true"></i></div>
                                     </div>
                                 </div>
                             </div>

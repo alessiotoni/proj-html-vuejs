@@ -297,6 +297,16 @@ const myApp = new Vue({
                 return
             }
         },
+        closeComments(x) {
+            if (x == "first") {
+                this.showCommentsFirst = false
+                return
+            }
+            if (x == "second") {
+                this.showCommentsSecond = false
+                return
+            }
+        }
         
     },
 
