@@ -45,8 +45,7 @@
             width: 130px;
             height: 20px;
             .button_primary {
-                padding-right: $spacing;
-                padding-left: $spacing;
+                margin-left: $spacing/3;
                 position: absolute;
                 top: 0;
                 right: 0;

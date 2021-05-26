@@ -123,6 +123,8 @@ const myApp = new Vue({
                 title: "Instructor Training"
             },
         ],
+        commentsListFirst: [],
+        commentsListSecond: ["ottima esperienza","lo consiglio","da migliorare","voto 5","Lorem ipsum dolor sit amet consectetur adipisicing elit."],
         emailsNewsletter: [],
         utentCallBack: [],
 
@@ -132,6 +134,8 @@ const myApp = new Vue({
         emailReceived: false,
         requestDataName: false,
         requestDataEmail: false,
+        showCommentsFirst: false,
+        showCommentsSecond: false,
 
         testimonialActive: 0,
         showCard: 0,
@@ -282,7 +286,18 @@ const myApp = new Vue({
                 this.testimonialActive = (this.testimonials.length - 1);
             }
 
-        }
+        },
+        showComments(x) {
+            if (x == "first") {
+                this.showCommentsFirst = !this.showCommentsFirst
+                return
+            }
+            if (x == "second") {
+                this.showCommentsSecond = !this.showCommentsSecond
+                return
+            }
+        },
+        
     },
 
     mounted() {

@@ -36,8 +36,11 @@
                 border-radius: 4px;
                 cursor: pointer;
                 padding: $spacing/2 0;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                margin-bottom: $spacing/5;
                 &:hover {
-                    background-color: $median_cut_primary;
+                    border-color: $median_cut_primary;
                 }
                 span {
                     vertical-align: text-top;

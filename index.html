@@ -275,16 +275,28 @@
                                         <img src="./public/images/blog-choosecar-700x441.jpg" alt="">
                                     </div>
                                     <h4>what car start with?</h4>
-                                    <p class="date">February 7th, 2019 | <a href="#">0 Comments</a></p>
+                                    <p class="date">February 7th, 2019 | <button @click="showComments('first')" @blur="showComments('first')" class="button_transparent">{{commentsListFirst.length}} comments</button></p>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <div class="comment" v-if="showCommentsFirst">
+                                        <p v-if="commentsListFirst.length == 0">Nessun commento</p>
+                                        <ul v-else>
+                                            <li v-for="comment,index in commentsListFirst"><span>{{index + 1}})</span> {{comment}}</li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="box_img">
                                         <img src="./public/images/blogpost-10and2-700x441.jpg" alt="">
                                     </div>
                                     <h4>avada driving school expanding</h4>
-                                    <p class="date">February 7th, 2019 | <a href="#">0 Comments</a></p>
+                                    <p class="date">February 7th, 2019 | <button @click="showComments('second')" @blur="showComments('second')" class="button_transparent">{{commentsListSecond.length}} comments</button></p>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <div class="comment" v-if="showCommentsSecond">
+                                        <p v-if="commentsListSecond.length == 0">Nessun commento</p>
+                                        <ul v-else>
+                                            <li v-for="comment,index in commentsListSecond"><span>{{index + 1}})</span> {{comment}}</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <button class="button_primary">more from the blog</button>

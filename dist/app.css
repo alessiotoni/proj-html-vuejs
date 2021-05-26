@@ -74,6 +74,11 @@ h2 {
   background-color: transparent;
 }
 
+.button_transparent {
+  border: transparent;
+  background-color: transparent;
+}
+
 .col-6 {
   width: 50%;
 }
@@ -141,8 +146,7 @@ h2 {
   height: 20px;
 }
 .hero nav ul li .container_button .button_primary {
-  padding-right: 20px;
-  padding-left: 20px;
+  margin-left: 6.6666666667px;
   position: absolute;
   top: 0;
   right: 0;
@@ -552,6 +556,7 @@ section.new .card {
   position: relative;
 }
 section.new .card .content .col-6 {
+  position: relative;
   margin: 0 10px;
   padding: 10px;
 }
@@ -576,11 +581,51 @@ section.new .card .content .col-6 h4 {
 section.new .card .content .col-6 .date {
   font-size: 12.8px;
 }
-section.new .card .content .col-6 .date a {
+section.new .card .content .col-6 .date button {
+  text-transform: capitalize;
   color: #d6c9b0;
 }
-section.new .card .content .col-6 .date a:hover {
+section.new .card .content .col-6 .date button:hover {
   text-decoration: underline;
+  letter-spacing: normal;
+}
+section.new .card .content .col-6 .comment {
+  color: #7f9ea8;
+  text-align: left;
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  width: 250px;
+  height: 110px;
+  overflow: auto;
+  padding: 0;
+  z-index: 20;
+  position: absolute;
+  border-radius: 4px;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section.new .card .content .col-6 .comment p {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section.new .card .content .col-6 .comment ul {
+  width: 100%;
+  height: 100%;
+}
+section.new .card .content .col-6 .comment ul li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 4px;
+  padding: 4px;
+  border-radius: 4px;
+}
+section.new .card .content .col-6 .comment ul li:hover {
+  background-color: aqua;
 }
 section.new .card .box_img_arrow {
   position: absolute;
@@ -663,9 +708,12 @@ section.newsletter .container_input input, section.newsletter .container_input b
   border-radius: 4px;
   cursor: pointer;
   padding: 10px 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin-bottom: 4px;
 }
 .footer_top .col-4 ul li:hover {
-  background-color: #e5e8eb;
+  border-color: #e5e8eb;
 }
 .footer_top .col-4 ul li span {
   vertical-align: text-top;
